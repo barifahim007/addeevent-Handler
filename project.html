@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>git hub delete btn</title>
+</head>
+
+<body>
+    <main>
+        <h1> git hub delete button</h1>
+        <p id="delete-info"> delete information</p>
+        <input id="text-field" type="text">
+        <button id="delete-btn" disabled> delete</button>
+    </main>
+    <script>
+        // part 2: get input field information
+        document.getElementById('text-field').addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            const dltBtn = document.getElementById('delete-btn');
+            if (text === 'delete') {
+                dltBtn.removeAttribute('disabled')
+            }
+            else {
+                dltBtn.setAttribute('disabled', true)
+            }
+
+        })
+        // part 1: get element information
+        document.getElementById('delete-btn').addEventListener('click', function () {
+            const deltedINFO = document.getElementById('delete-info')
+            deltedINFO.style.display = 'none'
+        })
+    </script>
+</body>
+
+</html>
