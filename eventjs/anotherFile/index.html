@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice and recape search box and comment box</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>how to search into a search box</h1>
+            <p id="default-text"> default text</p>
+            <input id="text-field" type="text">
+            <button id="search-btn"> search </button>
+        </section>
+        <br>
+        <section-2 id="post-comment">
+            <h1> this is comment box area</h1>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quas ipsam similique laudantium
+                eligendi sequi. Porro a accusantium architecto impedit?</p>
+            <p>Accusantium suscipit culpa odit corporis facere cum nam quo beatae delectus repudiandae nostrum,
+                perspiciatis reprehenderit quos accusamus, blanditiis deleniti iste.</p>
+            <p>Nesciunt sunt fuga odio. Tempore, molestias, minus laborum velit aliquam quasi excepturi facilis,
+                delectus saepe laboriosam cupiditate fuga inventore accusamus.</p>
+            <br>
+
+            <br>
+        </section-2>
+        <div>
+            <br>
+            <textarea name="" id="comment-field" cols="60" rows="10"></textarea>
+            <br>
+            <button id="comment-btn">comment here</button>
+        </div>
+    </main>
+    <script>
+        document.getElementById('comment-btn').addEventListener('click', function () {
+            const commentField = document.getElementById('comment-field')
+            const inputComment = commentField.value
+            const commentPost = document.getElementById('post-comment')
+            const post = document.createElement('post')
+            post.innerText = inputComment;
+            commentPost.appendChild(post)
+            commentField.value = '';
+
+
+
+
+        })
+
+
+
+        // search input field
+        document.getElementById('search-btn').addEventListener('click', function () {
+            const textField = document.getElementById('text-field')
+            const searchText = textField.value;
+            const defaultText = document.getElementById('default-text');
+            defaultText.innerText = searchText
+            textField.value = '';
+        })
+    </script>
+</body>
+
+</html>

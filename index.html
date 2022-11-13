@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>another exercise web</title>
+</head>
+
+<body>
+    <main>
+        <p id="default-text"> default text</p>
+        <input id="input-text" type="text">
+        <button id="btn-update"> update</button>
+        <br>
+        <section id="comment-container">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ducimus, molestiae exercitationem
+                illo et error architecto iste magni maxime totam neque facilis? Aut sed veniam sapiente labore
+                cupiditate libero nam voluptatem? Deserunt explicabo totam fugit beatae libero, consequatur mollitia,
+                culpa nihil harum distinctio magnam fuga esse cum. Nihil, vero consequuntur?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ducimus, molestiae exercitationem
+                illo et error architecto iste magni maxime totam neque facilis? Aut sed veniam sapiente labore
+                cupiditate libero nam voluptatem? Deserunt explicabo totam fugit beatae libero, consequatur mollitia,
+                culpa nihil harum distinctio magnam fuga esse cum. Nihil, vero consequuntur?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ducimus, molestiae exercitationem
+                illo et error architecto iste magni maxime totam neque facilis? Aut sed veniam sapiente labore
+                cupiditate libero nam voluptatem? Deserunt explicabo totam fugit beatae libero, consequatur mollitia,
+                culpa nihil harum distinctio magnam fuga esse cum. Nihil, vero consequuntur?</p>
+
+        </section>
+        <div>
+            <br>
+            <br>
+            <textarea name="" id="comment-field" cols="70" rows="5"></textarea>
+            <br>
+            <button id="cmnt-btn"> comment</button>
+        </div>
+    </main>
+    <script>
+        document.getElementById('cmnt-btn').addEventListener('click', function () {
+            const boxComment = document.getElementById('comment-field');
+            const commentBox = boxComment.value;
+            const container = document.getElementById('comment-container');
+            const cmntContainer = document.createElement('cmntContainer')
+            cmntContainer.innerText = commentBox;
+            container.appendChild(cmntContainer);
+            boxComment.value = '';
+
+        })
+    </script>
+    <script src="eventjs/event.js"></script>
+</body>
+
+</html>
